@@ -1,0 +1,10 @@
+@layer components {
+    .link {
+        @apply text-amber-600 hover:text-amber-800;
+    }
+    .card {
+        .link {
+            @apply text-lime-600 font-extrabold hover:text-lime-400;
+        }
+    }
+}
