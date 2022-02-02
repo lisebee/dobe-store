@@ -12,7 +12,7 @@
     <div class="bg-slate-900">
         <div class="max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 flex justify-between text-xs py-2">
             <div>
-                <div class="copyright text-center">雷諾曼餐酒館 © 2020. All Rights Reserved.</div>
+                <div class="copyright text-center">雷諾曼餐酒館 © 2020. All Rights Reserved. 個人練習，無商業用途</div>
             </div>
             <div class="flex">
                 <RouterLink to="" class="mx-2 hover:text-slate-300">使用條款</RouterLink>
