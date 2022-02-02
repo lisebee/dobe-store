@@ -16,10 +16,17 @@ export default defineConfig({
   plugins: [
     vue(),
     Pages(),
+    // Pages({
+    //   //想改成自訂router時
+    //   pagesDir: [
+    //     { dir: "src/pages", baseRoute: "" },
+    //     { dir: "src/components", baseRoute: "" },
+    //   ],
+    // }),
     Components({ 
       resolvers: IconsResolver({
         prefix: false, //移除icon component起頭的大寫i
-        enabledCollections: ['heroicons-outline','dashicons'] //使用到的icon風格
+        enabledCollections: ['heroicons-outline','heroicons-solid','dashicons'] //使用到的icon風格
       }),
     }),
     Icons({ /* options */ }),

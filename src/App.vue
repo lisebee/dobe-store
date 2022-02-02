@@ -4,16 +4,20 @@
 </script>
 
 <template>
-  
-  <RouterView></RouterView>
-
+  <Header></Header>
+    <main>
+      <RouterView></RouterView>
+    </main>
+  <Footer></Footer>
 </template>
 
 <style>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+}
+main {
+  min-height: calc(100vh - 184px);
+  padding-top: 60px;
 }
 </style>

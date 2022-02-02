@@ -1,7 +1,9 @@
 <script>
 import axios from "axios";
+import Button from '@/components/Button.vue';
 
 export default {
+  components: { Button },
     data() {
         return {
             user: {
@@ -35,20 +37,23 @@ export default {
 </script>
 
 <template>
-<div class="flex justify-center items-center h-screen bg-cyan-900">
-    <form class="py-8 px-16 rounded bg-cyan-700 drop-shadow-lg">
-        <div class="mb-2">
-            <label for="emailInput" class="text-white mb-2 pr-4">帳號</label>
-            <input id="emailInput" type="email" placeholder="name@example.com" v-model="user.username" />
-        </div>
-        <div class="mb-2">
-            <label for="pwInput" class="text-white mb-2 pr-4">密碼</label>
-            <input id="pwInput" type="text" v-model="user.password" />
-        </div>
+    <div class="flex flex-col justify-center items-center h-screen bg-slate-900 fixed top-0 left-0 z-50 w-full">
+        <h1 class="text-2xl font-bold text-slate-300 mb-10">管理者登入</h1>
+        <form class="py-8 px-16 rounded bg-slate-100/10 drop-shadow-lg">
+            <div class="mb-2">
+                <label for="emailInput" class="text-white mb-2 pr-4">帳號</label>
+                <input id="emailInput" type="email" placeholder="name@example.com" v-model="user.username" />
+            </div>
+            <div class="mb-2">
+                <label for="pwInput" class="text-white mb-2 pr-4">密碼</label>
+                <input id="pwInput" type="text" v-model="user.password" />
+            </div>
 
-        <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-10 rounded" type="submit" @click.prevent="login">登入</button>
-    </form>
-</div>
+            <div class="flex justify-center">
+                <Button @click.prevent="login">登入</Button>
+            </div>
+        </form>
+    </div>
 </template>
 
 <style scoped>

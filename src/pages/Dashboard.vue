@@ -1,17 +1,36 @@
 <script>
 import axios from 'axios';
-import Modal from "../components/modal.vue"
+import DashboardProduct from "../components/DashboardProduct.vue"
+import DashboardArticle from "../components/DashboardArticle.vue"
+
 export default {
-    components: { Modal },
+    components: { DashboardProduct, DashboardArticle },
     data() {
         return {
             url: 'https://vue3-course-api.hexschool.io/v2',
             path: 'dobe',
+            currentTab: 'dashboard-product',
+            tabs: [
+                {
+                    component: 'dashboard-product',
+                    title: '商品管理'
+                },
+                {
+                    component: 'dashboard-article',
+                    title: '文章管理'
+                }
+            ],
             openModal: false,
             tableSubject: ["分類", "產品名稱", "原價", "售價", "啟用", "編輯", "細節", "刪除"],
             productsData: [],
             productDetail: [],
         };
+    },
+    computed: {
+        currentTabComponent() {
+            //return `tab-${ this.currentTab.toLowerCase() }`;
+            return `${ this.currentTab.toLowerCase() }`;
+        }
     },
     mounted() {
         //取得 token
@@ -29,11 +48,6 @@ export default {
                 console.log("read this.productDetail====>", this.productDetail);
                 console.log("read this.productDetail.category====>", this.productDetail.category);
             });
-    },
-    watch: {
-        // productDetail(nval,oval) {
-        //     this.readPD();
-        // }
     },
     methods: {
         controlModal(){
@@ -65,66 +79,27 @@ export default {
 </script>
 
 <template>
-<div class=" w-[1000px] mx-auto">
-    <div class="flex justify-between py-4 mb-8">
-        <h2 class="flex font-black text-2xl tracking-wide"><img src="../assets/logo.png" class="h-10 mr-3"><span>VUE3 後台</span></h2>
-        <button class=" bg-cyan-900 text-cyan-200 rounded py-2 px-4 hover:bg-cyan-700" type="submit" @click="controlModal" :openModal="openModal">建立新產品</button>
+<div class="flex">
+    <div class="h-screen bg-slate-800 text-slate-400 py-4 px-6">
+        <h2 class="flex items-center font-medium text-xl whitespace-nowrap tracking-wide"><heroicons-outline-color-swatch class="w-6 h-6 mr-1" /><span>雷諾曼解憂餐酒館</span></h2>
+        
+        <div class="border-y-2 border-y-slate-700 py-3 my-4">Hi,Dobe 管理者</div>
+
+        <button class="flex items-center my-4 mx-2 hover:text-slate-300"
+            v-for="tab in tabs"
+            :key="tab.component"
+            :class="['tab-button', { active: currentTab === tab.component }]"
+            @click="currentTab = tab.component">
+            <heroicons-outline-document-text class="w-6 h-6 mr-1" />{{ tab.title }}
+        </button>
     </div>
+    <div>
 
-    <div class="flex flex-row">
-        <div class="basis-1/4">
-            <div class="bg-slate-200 drop-shadow-2xl rounded p-4">
-                <h2 class="font-bold text-xl mb-4">產品細節</h2>
-                <div>
-                    <div class="flex justify-center">
-                        <img :src="productDetail.imageUrl" class="h-40 w-auto" />
-                    </div>
-                    <div class="text-left">
-                        <h3 class="font-bold text-l">{{productDetail.title}}</h3><span class="inline-block text-xs bg-slate-700 text-white py-1 px-4">{{productDetail.category}}</span>
-                        <p class="my-2">{{productDetail.description}}</p>
-                        <p class="my-2">{{productDetail.content}}</p>
-                        <p class="my-2"><span class=" font-bold mr-2">{{productDetail.price}}</span><span class="line-through mr-2">{{productDetail.origin_price}}</span>個/元</p>
-                    </div>
-                    <div class="flex flex-wrap">
-                        <img :src="img" class="h-9 border border-slate-50" v-for="img in productDetail.imagesUrl" :key="img" />
-                    </div>
-                </div>
-            </div>
-        </div>
+    <keep-alive :include="['dashboard-product', 'dashboard-article']" :max="2">
+        <component :is="currentTabComponent" />
+    </keep-alive>
 
-        <div class="basis-3/4 pl-4">
-            <table class="w-full">
-                <thead>
-                    <tr class=" border-b-2">
-                        <td class=" font-bold py-2 px-4" v-for="th in tableSubject" :key="th+1">{{th}}</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class=" border-b" v-for="item in productsData" :key="item.id">
-                        <td class=" py-4 px-6">{{item.category}}</td>
-                        <td>{{item.title}}</td>
-                        <td>{{item.origin_price}}</td>
-                        <td>{{item.price}}</td>
-                        <td>{{item.is_enabled}}</td>
-                        <td><button @click.prevent="editPD(this.removeID=item.id)"><heroicons-outline-pencil class=" w-6 h-6 text-cyan-700 mx-auto" /></button></td>
-                        <td><button @click.prevent="readPD(item.id)"><heroicons-outline-document-text class=" w-6 h-6 text-cyan-700 mx-auto" /></button></td>
-                        <td><button @click.prevent="removePD(this.removeID=item.id)"><heroicons-outline-trash class=" w-6 h-6 text-cyan-700 mx-auto" /></button></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td class="py-4">目前有 {{productsData.length}} 項產品</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
     </div>
 </div>
 
-<Modal v-if="openModal" @close="openModal = false" :openModal="openModal"></Modal>
-
 </template>
-
-<style scoped>
-
-</style>
