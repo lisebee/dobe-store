@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/dobe-store/",
+    "build": "vite build --base=/dobe-store/dist/",
     "preview": "vite preview"
   },
   "dependencies": {
