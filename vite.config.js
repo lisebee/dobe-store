@@ -31,5 +31,5 @@ export default defineConfig({
     }),
     Icons({ /* options */ }),
   ],
-  base: '/dobe-store/' //部署到github page
+  base: process.env.NODE_ENV === 'production' ? '/dobe-store/' : './',  //部署到github page
 })
