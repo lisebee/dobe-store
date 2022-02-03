@@ -1,0 +1,1 @@
+import{_ as t}from"./index.7ce63324.js";import{o as n,c as o,i as s}from"./vendor.f668e959.js";const r={},c={class:"flex justify-between items-center bg-amber-300 py-1 px-8 my-4"};function _(e,a){return n(),o("button",c,[s(e.$slots,"default")])}var m=t(r,[["render",_]]);export{m as _};
