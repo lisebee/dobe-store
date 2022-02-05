@@ -1,5 +1,5 @@
 @layer base {
-    html {
-        @apply font-light;
-    }
+  html {
+    @apply font-light;
+  }
 }

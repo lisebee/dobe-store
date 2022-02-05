@@ -25,6 +25,18 @@ module.exports = {
       },
       colors: {
         'gray': colors.zinc,
+        'brown-100': '#efeae5',
+        'brown-200': '#e6dace',
+        'brown-300': '#d5c9bd',
+        'brown-400': '#d1c0b3',
+        'brown-500': '#d1ba98',
+        'brown-600': '#997f61',
+        'brown-700': '#c3947c',
+        'brown-800': '#8a623e',
+        'rosy-100': '#ffe2db',
+        'rosy-500': '#c2847a',
+        'rosy-700': '#b5677d',
+        'rosy-900': '#633448',
       },
       fontFamily: {
         sans: ['Noto Sans TC',...fontFamily.sans],

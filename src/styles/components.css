@@ -1,10 +1,13 @@
 @layer components {
+  .container {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8;
+  }
+  .link {
+    @apply text-amber-600 hover:text-amber-800;
+  }
+  .card {
     .link {
-        @apply text-amber-600 hover:text-amber-800;
+      @apply text-lime-600 font-extrabold hover:text-lime-400;
     }
-    .card {
-        .link {
-            @apply text-lime-600 font-extrabold hover:text-lime-400;
-        }
-    }
+  }
 }

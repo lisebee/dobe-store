@@ -5,9 +5,9 @@
 
 <template>
   <Header></Header>
-    <main>
-      <RouterView></RouterView>
-    </main>
+  <main>
+    <RouterView></RouterView>
+  </main>
   <Footer></Footer>
 </template>
 
@@ -18,6 +18,5 @@
 }
 main {
   min-height: calc(100vh - 184px);
-  padding-top: 60px;
 }
 </style>

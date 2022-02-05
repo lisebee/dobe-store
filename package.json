@@ -1,10 +1,11 @@
 {
-  "name": "admin_website",
+  "name": "store_website",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/dobe-store/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier": "prettier -w ./src"
   },
   "dependencies": {
     "axios": "^0.25.0",
