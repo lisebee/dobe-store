@@ -1,6 +1,7 @@
 <script></script>
 
 <template>
+<article id="tool" class="page">
   <Headings>
     <h1 class="flex text-3xl font-bold text-slate-900">
       <dashicons-heart class="w-10 h-10 text-amber-700" /> 抽牌程式
@@ -15,6 +16,7 @@
     </div>
     <AstrologyDice></AstrologyDice>
   </div>
+</article>
 </template>
 
 <style scoped></style>

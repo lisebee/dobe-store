@@ -56,6 +56,7 @@ export default {
 </script>
 
 <template>
+<article id="home">
   <div
     id="kingBanner"
     class="bg-cover bg-center relative h-0 pt-[500px] md:pt-[54%] lg:pt-[46%]"
@@ -134,9 +135,9 @@ export default {
         </div>
       </div>
       <div class="max-w-[500px] order-1 md:order-2">
-        <div class="bg-rosy-500 h-full p-8 md:py-16 md:px-24">
-          <h2 class="font-semibold text-white text-4xl my-7">身心靈好物精選</h2>
-          <p class="font-normal text-white my-7">
+        <div class="bg-brown-400 text-brown-800 h-full p-8 md:py-16 md:px-24">
+          <h2 class="font-semibold text-4xl my-7">身心靈好物精選</h2>
+          <p class="font-normal my-7">
             首有北現夫師用象，又你兩子那風打裡因外不查天西產題色條？當病選資推世一那上子上之有；夜市人以於有此把當房學的著現平前
           </p>
           <Button>來去逛逛</Button>
@@ -207,6 +208,7 @@ export default {
       </div>
     </div>
   </div>
+</article>
 </template>
 
 <style scoped>

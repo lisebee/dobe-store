@@ -119,13 +119,13 @@ export default {
     window.addEventListener('scroll',function(){
         console.log("this.isScroll 1==>", this.isScroll);
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if(scrollTop>150){
+        let el = document.getElementById('header');
+        if(scrollTop>100){
             this.isScroll = true;
             this.scrollTop = scrollTop;
-            let el = document.getElementById('header')
-            el.classList.add("bg-rosy-900")
+            el.classList.add("bg-black")
         }else{
-            el.classList.remove("bg-rosy-900")
+            el.classList.remove("bg-black")
         }
         console.log("scrollTop==>", this.scrollTop);
         console.log("this.isScroll 2==>", this.isScroll);

@@ -52,6 +52,7 @@ export default {
 </script>
 
 <template>
+<article id="about" class="page">
   <Headings>
     <h1 class="flex text-3xl font-bold text-slate-900">
       <dashicons-heart class="w-10 h-10 text-amber-700" /> 關於占卜
@@ -71,6 +72,7 @@ export default {
       <CardPd :products="products"></CardPd>
     </div>
   </div>
+</article>
 </template>
 
 <style scoped></style>

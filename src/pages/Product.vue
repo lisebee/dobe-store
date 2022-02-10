@@ -72,6 +72,7 @@ export default {
 </script>
 
 <template>
+<article id="product" class="page">
   <Headings>
     <h1 class="flex text-3xl font-bold text-slate-900">
       <dashicons-heart class="w-10 h-10 text-amber-700" /> 好運商店
@@ -98,6 +99,7 @@ export default {
       <Pagination></Pagination>
     </div>
   </div>
+</article>
 </template>
 
 <style scoped></style>

@@ -2,9 +2,11 @@
 import axios from "axios";
 import DashboardProduct from "../components/DashboardProduct.vue";
 import DashboardArticle from "../components/DashboardArticle.vue";
+import DashboardOrder from "../components/DashboardOrder.vue";
+import DashboardCoupon from "../components/DashboardCoupon.vue";
 
 export default {
-  components: { DashboardProduct, DashboardArticle },
+  components: { DashboardProduct, DashboardArticle, DashboardOrder, DashboardCoupon },
   data() {
     return {
       url: "https://vue3-course-api.hexschool.io/v2",
@@ -18,6 +20,14 @@ export default {
         {
           component: "dashboard-article",
           title: "文章管理",
+        },
+        {
+          component: "dashboard-order",
+          title: "訂單管理",
+        },
+        {
+          component: "dashboard-coupon",
+          title: "優惠券管理",
         },
       ],
       openModal: false,
