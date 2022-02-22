@@ -1,6 +1,6 @@
 <script>
 import axios from "axios";
-import Modal from "./modal.vue";
+import Modal from "../components/Modal.vue";
 export default {
   components: { Modal },
   name: "dashboard-product",
