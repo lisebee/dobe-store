@@ -42,7 +42,7 @@
             >關於占卜</RouterLink
           >
           <RouterLink
-            to="Product"
+            to="Products"
             class="mx-8 my-2 text-xl md:mx-2 md:text-base hover:text-slate-300"
             >好運商店</RouterLink
           >

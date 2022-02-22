@@ -12,15 +12,14 @@ export default {
 </script>
 
 <template>
-  <div
-    class="bg-brown-200 max-w-fit md:w-[500px] p-4 absolute top-4 right-0 z-40"
-  >
-    <div class="flex justify-between">
-      <h3>購物車商品:</h3>
-      <div @click="$emit('close')">
-        <heroicons-outline-x class="w-5 h-5 cursor-pointer" />
-      </div>
-    </div>
+<article id="tool" class="page">
+  <Headings>
+    <h1 class="flex text-3xl font-bold text-slate-900">
+      <dashicons-heart class="w-10 h-10 text-amber-700" /> 購物車
+    </h1>
+  </Headings>
+  <div class="container">
+    <div class="w-[800px] mx-auto">
     <table class="w-full">
       <thead>
         <tr class="border-b-2">
@@ -63,7 +62,9 @@ export default {
     </table>
     <div class="flex justify-between">
       <Button>繼續購物</Button>
-      <Button @click="this.$router.push('Cart')">確認訂單前往結賬</Button>
+      <Button>確認訂單前往結賬</Button>
+    </div>
     </div>
   </div>
+</article>
 </template>

@@ -4,11 +4,7 @@
 </script>
 
 <template>
-  <Header></Header>
-  <main>
-    <RouterView></RouterView>
-  </main>
-  <Footer></Footer>
+<RouterView></RouterView>
 </template>
 
 <style>

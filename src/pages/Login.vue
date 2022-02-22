@@ -27,7 +27,12 @@ export default {
           //儲存 token
           document.cookie = `myToken=${token}; expires=${new Date(expired)};`;
 
-          window.location.href = "/#/dashboard";
+          //$router(方法);$route(取得參數)
+          this.$router.push("/admin/product");
+          
+          //往前一頁
+          //this.$router.go(-1);
+
         })
         .catch(function (error) {
           console.log("axios error message ====>", error.message);
@@ -39,7 +44,7 @@ export default {
 
 <template>
   <div
-    class="flex flex-col justify-center items-center h-screen bg-slate-900 fixed top-0 left-0 z-50 w-full"
+    class="flex flex-col justify-center items-center h-screen bg-slate-900"
   >
     <h1 class="text-2xl font-bold text-slate-300 mb-10">管理者登入</h1>
     <form class="py-8 px-16 rounded bg-slate-100/10 drop-shadow-lg">
