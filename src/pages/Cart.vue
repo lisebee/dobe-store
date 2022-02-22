@@ -66,5 +66,46 @@ export default {
     </div>
     </div>
   </div>
+  <!--表單-->
+  <div class="container">
+    <form class="py-8 px-16 rounded bg-slate-100/10 drop-shadow-lg">
+      <div class="mb-2">
+        <label for="inputName" class="text-white mb-2 pr-4">姓名</label>
+        <input id="inputName" type="text" v-model="user.name" />
+      </div>
+      <div class="mb-2">
+        <label for="inputPhone" class="text-white mb-2 pr-4">電話</label>
+        <input id="inputPhone" type="number" v-model="user.phone" />
+      </div>
+      <div class="mb-2">
+        <label for="inputPhone" class="text-white mb-2 pr-4">地址</label>
+        <input id="inputPhone" type="text" v-model="user.phone" />
+      </div>
+      <div class="mb-2">
+        <label for="inputEmail" class="text-white mb-2 pr-4">Email</label>
+        <input id="inputEmail" type="email" placeholder="name@example.com" v-model="user.email" />
+      </div>
+
+
+
+      <div class="mb-2">
+        <label for="emailInput" class="text-white mb-2 pr-4">帳號</label>
+        <input
+          id="emailInput"
+          type="email"
+          placeholder="name@example.com"
+          v-model="user.username"
+        />
+      </div>
+      <div class="mb-2">
+        <label for="pwInput" class="text-white mb-2 pr-4">密碼</label>
+        <input id="pwInput" type="text" v-model="user.password" />
+      </div>
+
+      <div class="flex justify-center">
+        <Button @click.prevent="login">登入</Button>
+      </div>
+    </form>
+  </div>
 </article>
 </template>

@@ -16,7 +16,7 @@
       >
         <div>
           <div class="copyright text-center">
-            雷諾曼餐酒館 © 2022. All Rights Reserved. 個人練習無商用
+            解憂餐酒館 © 2022. All Rights Reserved. 個人練習無商用
           </div>
         </div>
         <div class="flex items-center">
@@ -28,7 +28,7 @@
           >
           <RouterLink to="Login" class="mx-2 hover:text-slate-300"
             ><heroicons-solid-user-circle class="w-5 h-5 mx-1" /></RouterLink>
-          <RouterLink to="admin" class="mx-2 hover:text-slate-300"
+          <RouterLink to="/admin/products" class="mx-2 hover:text-slate-300"
             >後台</RouterLink
           >
         </div>

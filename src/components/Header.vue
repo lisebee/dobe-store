@@ -11,7 +11,7 @@
       <span class="flex-1 flex text-xl font-bold ml-6"
         ><heroicons-outline-color-swatch
           class="w-6 h-6"
-        />雷諾曼解憂餐酒館</span
+        />解憂餐酒館</span
       >
       <button @click="controlCart" :openCart="openCart"><heroicons-outline-shopping-cart class="w-8 h-8" /></button>
     </div>
@@ -30,7 +30,7 @@
             >
               <heroicons-outline-color-swatch
                 class="w-6 h-6"
-              />雷諾曼解憂餐酒館</RouterLink
+              />解憂餐酒館</RouterLink
             >
             <button @click="openMenu = false">
               <heroicons-outline-x class="w-8 h-8 text-white md:hidden" />

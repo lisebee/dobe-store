@@ -2,7 +2,7 @@
   <router-link
     v-for="product in products"
     :key="product.id"
-    :to="`/products/${product.id}`"
+    :to="`/Product/${product.id}`"
     class="group"
   >
     <div

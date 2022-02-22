@@ -3,7 +3,7 @@ const products = [
   {
     id: 1,
     name: "【招桃花】開運裝飾畫",
-    href: "`/Products/${i}`",
+    href: "#",
     price: "NT$ 1348",
     imageSrc:
       "https://cdn.pixabay.com/photo/2019/07/24/02/30/klimt-4359075_1280.jpg",

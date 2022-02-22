@@ -11,7 +11,7 @@ const routes = [
       import ("@/pages/FrontendLayout.vue"),
       children: [
           {
-            path: "/",
+            path: "",
             name: "Home",
             component: () =>
             import ("@/pages/Home.vue"),
@@ -23,13 +23,13 @@ const routes = [
             import ("@/pages/About.vue"),
           },
           {
-            path: "products",
+            path: "/products",
             name: "Products",
             component: () =>
             import ("@/pages/Products/index.vue"),
           },
           {
-            path: "/products/:id",
+            path: "/product/:id",
             name: "Product",
             component: () =>
             import ("@/pages/Products/_id.vue"),
@@ -68,13 +68,13 @@ const routes = [
   },
   {
     path: "/admin",
-    name: "DashboardLayout",
+    name: "Admin",
     component: () =>
     import ("@/pages/DashboardLayout.vue"),
     children: [
       {
-        path: "product",
-        name: "AdminProduct",
+        path: "products",
+        name: "AdminProducts",
         component: () =>
         import ("@/pages/AdminProduct.vue"),
       },
@@ -85,13 +85,13 @@ const routes = [
         import ("@/pages/AdminArticle.vue"),
       },
       {
-        path: "/admin/coupon",
+        path: "coupon",
         name: "AdminCoupon",
         component: () =>
         import ("@/pages/AdminCoupon.vue"),
       },
       {
-        path: "/admin/order",
+        path: "order",
         name: "AdminOrder",
         component: () =>
         import ("@/pages/AdminOrder.vue"),

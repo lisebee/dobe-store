@@ -2,40 +2,44 @@
 const products = [
   {
     id: 1,
-    name: "【個人主題占卜】主題擇一",
+    title: "【個人主題占卜】主題擇一",
     href: "#",
-    price: "NT$ 600",
-    imageSrc:
+    price: "600",
+    origin_price: "800",
+    imageUrl:
       "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
     imageAlt:
       "Hand holding black machined steel mechanical pencil with brass tip and top.",
   },
   {
     id: 2,
-    name: "【專屬月運占卜】各方面預測",
+    title: "【專屬月運占卜】各方面預測",
     href: "#",
-    price: "NT$ 600",
-    imageSrc:
+    price: "600",
+    origin_price: "800",
+    imageUrl:
       "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
     imageAlt:
       "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
   },
   {
     id: 3,
-    name: "【專屬週運占卜】各方面預測",
+    title: "【專屬週運占卜】各方面預測",
     href: "#",
-    price: "NT$ 300",
-    imageSrc:
+    price: "300",
+    origin_price: "600",
+    imageUrl:
       "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
     imageAlt:
       "Olive drab green insulated bottle with flared screw lid and flat top.",
   },
   {
     id: 4,
-    name: "【年度運勢占卜】雷諾曼大桌陣",
+    title: "【年度運勢占卜】雷諾曼大桌陣",
     href: "#",
-    price: "NT$ 1200",
-    imageSrc:
+    price: "1200",
+    origin_price: "1500",
+    imageUrl:
       "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
     imageAlt:
       "Person using a pen to cross a task off a productivity paper car$",
