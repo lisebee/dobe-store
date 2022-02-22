@@ -23,13 +23,13 @@ const routes = [
             import ("@/pages/About.vue"),
           },
           {
-            path: "/products",
+            path: "products",
             name: "Products",
             component: () =>
             import ("@/pages/Products/index.vue"),
           },
           {
-            path: "/product/:id",
+            path: "product/:id",
             name: "Product",
             component: () =>
             import ("@/pages/Products/_id.vue"),
