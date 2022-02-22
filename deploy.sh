@@ -1,25 +1,26 @@
-#! deploy.sh
+#!/usr/bin/env sh
 
-# abort on errors
+# 发生错误时终止
 set -e
 
-# build
+# 构建
 npm run build
 
-# navigate into the build output directory
+# 进入构建文件夹
 cd dist
 
-# if you are deploying to a custom domain
+# 如果你要部署到自定义域名
 # echo 'www.example.com' > CNAME
 
 git init
+git checkout -b main
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# 如果你要部署在 https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# 如果你要部署在 https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:lisebee/dobe-store.git main:gh-pages
 
 cd -
